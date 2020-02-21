@@ -15,7 +15,7 @@ public class NotificationListener {
 
     @StreamListener(NotificationStream.INPUT)
     public void process(Notification notificationEvent) {
-        notificationService.execute(notificationEvent);
+        notificationService.execute(notificationEvent).subscribe();
     }
 
 }
